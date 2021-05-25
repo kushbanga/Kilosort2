@@ -29,7 +29,7 @@ ibatch = 1;
 while ibatch<=Nbatch
     offset = max(0, twind + 2*NchanTOT*((NT - ops.ntbuff) * (ibatch-1) - 2*ops.ntbuff));
     fseek(fid, offset, 'bof');
-    buff = fread(fid, [NchanTOT NTbuff], '*int16');
+    buff = fread(fid, [NchanTOT NTbuff], '*float32');
 
     if isempty(buff)
         break;

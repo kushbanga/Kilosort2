@@ -196,19 +196,19 @@ if ~isempty(savePath)
             [root, fname, ext] = fileparts(rez.ops.fproc);
         end
 %         fprintf(fid,['dat_path = ''',fname ext '''\n']);
-        fprintf(fid,['dat_path = ''', strrep(rez.ops.fproc, '\', '/') '''\n']);
+        %fprintf(fid,['dat_path = ''', strrep(rez.ops.fproc, '\', '/') '''\n']);
         
-        fprintf(fid,'n_channels_dat = %i\n',rez.ops.Nchan);
+        %fprintf(fid,'n_channels_dat = %i\n',rez.ops.Nchan);
         
-        fprintf(fid,'dtype = ''int16''\n');
-        fprintf(fid,'offset = 0\n');
+        %fprintf(fid,'dtype = ''int16''\n');
+        %fprintf(fid,'offset = 0\n');
         if mod(rez.ops.fs,1)
-            fprintf(fid,'sample_rate = %i\n',rez.ops.fs);
+            %fprintf(fid,'sample_rate = %i\n',rez.ops.fs);
         else
-            fprintf(fid,'sample_rate = %i.\n',rez.ops.fs);
+            %fprintf(fid,'sample_rate = %i.\n',rez.ops.fs);
         end
 %         fprintf(fid,'hp_filtered = False');
-        fprintf(fid,'hp_filtered = True');
+        %fprintf(fid,'hp_filtered = True');
         
         fclose(fid);
     end

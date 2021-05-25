@@ -81,7 +81,7 @@ for ibatch = 1:Nbatch
     
     fseek(fid, offset, 'bof'); % fseek to batch start in raw file
 
-    buff = fread(fid, [NchanTOT NTbuff], '*int16'); % read and reshape. Assumes int16 data (which should perhaps change to an option)
+    buff = fread(fid, [NchanTOT NTbuff], '*float32'); % read and reshape. Assumes int16 data (which should perhaps change to an option)
     if isempty(buff)
         break; % this shouldn't really happen, unless we counted data batches wrong
     end
